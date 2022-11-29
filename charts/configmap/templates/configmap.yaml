@@ -9,7 +9,7 @@ metadata:
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
-{{- with .Values.configMap.stringData }}
+{{- with .Values.configMap.data }}
 data:
   {{- toYaml . | nindent 4 }}
 {{- end }}
