@@ -1,0 +1,16 @@
+{{- $fullName := include "configmap.fullname" . -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "configmap.labels" . | nindent 4 }}
+  {{- with .Values.configMap.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+{{- with .Values.configMap.stringData }}
+stingData:
+  {{- toYaml . | nindent 4 }}
+{{- end }}
+

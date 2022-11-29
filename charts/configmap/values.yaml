@@ -1,0 +1,12 @@
+# Default values for configmap.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+nameOverride: ""
+fullnameOverride: ""
+
+configMap:
+  annotations:
+    testCase: env-test
+  stringData:
+    testData: example
