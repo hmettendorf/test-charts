@@ -10,7 +10,7 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 {{- with .Values.configMap.stringData }}
-stingData:
+data:
   {{- toYaml . | nindent 4 }}
 {{- end }}
 

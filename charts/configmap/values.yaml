@@ -8,5 +8,5 @@ fullnameOverride: ""
 configMap:
   annotations:
     testCase: env-test
-  stringData:
+  data:
     testData: example
